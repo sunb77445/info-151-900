@@ -4,26 +4,28 @@
 @use "../helpers";
 
 #newsletter {
-  background-color: var(--lilyWhite);
-
-  h1 {
-    color: var(--nightBlue);
-  }
-
-  p {
-    color: var(--grey);
-  }
-
-  form {
-    input {
-      border: none;
+    background-color: var(--lilywhite);
+  
+    p {
       color: var(--grey);
+      line-height: helpers.rem-calc(28);
+      font-weight: 600;
     }
-
-    button {
-      border: none;
-      background-color: var(--nightBlue);
-      color: var(--white);
+  
+    form {
+      input {
+        border: none;
+        color: var(--grey);
+        font-weight: 600;
+      }
+  
+      button {
+        border: none;
+        background-color: var(--nightBlue);
+        color: var(--white);
+        font-size: helpers.rem-calc(14);
+        font-weight: 600;
+      }
     }
   }
-}
+  

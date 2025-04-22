@@ -339,6 +339,10 @@ html {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* =============
     Buttons
 ============= */
@@ -377,9 +381,6 @@ textarea {
 #hero {
   background-color: var(--lilyWhite);
 }
-#hero section article h1 {
-  color: var(--nightBlue);
-}
 #hero section article p {
   color: var(--grey);
 }
@@ -402,9 +403,6 @@ textarea {
 ============= */
 #packages {
   background-color: var(--lilyWhite);
-}
-#packages h1 {
-  color: var(--nightBlue);
 }
 #packages #package-button-container {
   background-color: var(--white);
@@ -450,9 +448,6 @@ textarea {
 ============= */
 #newsletter {
   background-color: var(--lilyWhite);
-}
-#newsletter h1 {
-  color: var(--nightBlue);
 }
 #newsletter p {
   color: var(--grey);
