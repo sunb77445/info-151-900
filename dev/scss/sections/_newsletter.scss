@@ -4,12 +4,18 @@
 @use "../helpers";
 
 #newsletter {
-    background-color: var(--lilywhite);
+    padding: 40px 24px;
+  
+    #newsletter-content {
+      background-color: var(--lilywhite);
+      padding: 60px 16px;
+    }
   
     p {
       color: var(--grey);
-      line-height: helpers.rem-calc(28);
       font-weight: 600;
+      line-height: helpers.rem-calc(28);
+      margin: 16px 0;
     }
   
     form {
@@ -17,6 +23,24 @@
         border: none;
         color: var(--grey);
         font-weight: 600;
+        width: 100%;
+        padding: 24px 8px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+  
+      ::placeholder {
+        color: var(--grey);
+        opacity: 1; /* Firefox */
+      }
+  
+      ::-ms-input-placeholder {
+        color: var(--grey); /* Edge 12 - 18 */
+      }
+
+      div{
+        text-align: right;
       }
   
       button {
@@ -27,5 +51,11 @@
         font-weight: 600;
       }
     }
+  
+    aside {
+      // week 4 code
+      display: none;
+    }
   }
+  
   
