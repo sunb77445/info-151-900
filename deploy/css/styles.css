@@ -316,6 +316,13 @@ template {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --Ghost: #F0FAFF;
+  --lilyWhite: #ECF9FF;
+  --snowdrop: #F9FDFF;
+  --aqua: #00E5CC;
+  --nightBlue: #060640;
+  --grey: #9090A7;
+  --jaguar: #000020;
 }
 
 /* ---------------- Font Sizing ---------------- */
@@ -324,8 +331,8 @@ html {
 }
 
 /* ---------------- Media Queries ---------------- */
-.green-list-item {
-  background-color: green;
+.img-scaler {
+  width: 100%;
 }
 
 /* =============
@@ -363,3 +370,29 @@ textarea {
 /* =============
     Footer
 ============= */
+/* =============
+    Hero
+============= */
+#hero {
+  background-color: var(--lilyWhite);
+}
+#hero section article h1 {
+  color: var(--nightBlue);
+}
+#hero section article p {
+  color: var(--grey);
+}
+#hero section article a:link, #hero section article a:visited {
+  background-color: var(--nightBlue);
+  color: var(--white);
+}
+#hero section article button {
+  background-color: var(--white);
+  border: none;
+}
+#hero section #hero-card {
+  background-color: var(--snowdrop);
+}
+#hero section #hero-card h5 {
+  color: var(--nightBlue);
+}
