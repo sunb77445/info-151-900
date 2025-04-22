@@ -32,15 +32,17 @@
         <img src="img/hero/hero-right.png" alt="image of a happy person" class="img-scaler">
     </aside>
 </section>
-<section>
+<section id="packages">
     <h1>Popular packages</h1>
     <img src="img/global/green-icon.svg" alt="part of a green outline">
 
-    <button><img src="img/packages/arrow-left.svg" alt="left chervon icon"></button>
-    <button><img src="img/packages/arrow-right.svg" alt="right chervon icon"></button>
+    <div id="package-button-container">
+        <button id="left-arrow"><img src="img/packages/arrow-left.svg" alt="left chervon icon"></button>
+        <button id="right-arrow"><img src="img/packages/arrow-right.svg" alt="right chervon icon"></button>
+    </div>
 
-    <ul>
-        <li>
+    <ul id="package-card-container">
+        <li class="package-card">
             <img src="img/packages/card-1.jpg" alt="people at a coffee shop" class="img-scaler">
             <p>The basic package to start your promotion</p>
             <ul>
@@ -53,7 +55,7 @@
         </li>
 
 
-        <li>
+        <li class="selected package-card">
             <img src="img/packages/card-3.jpg" alt="people at a coffee shop" class="img-scaler">
             <p>The standard package to grow your business</p>
             <ul>
@@ -66,7 +68,7 @@
         </li>
 
 
-        <li>
+        <li class="package-card">
             <img src="img/packages/card-2.jpg" alt="people at a coffee shop" class="img-scaler">
             <p>The premium package to boost your promotion</p>
             <ul>
