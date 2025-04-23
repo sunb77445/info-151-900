@@ -3,3 +3,14 @@
 ============= */
 @use "../helpers";
 
+#comms{
+    padding: 40px 24px;
+    text-align: center;
+
+    p{
+        margin: 24px 0px 48px;
+        line-height: 20px;
+        color: var(--grey);
+        font-weight: 600;
+    }
+}

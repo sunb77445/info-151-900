@@ -8,12 +8,18 @@ body {
 }
 
 
-.section-title {
-  color: var(--nightBlue);
-  font-size: 50px;
-  line-height: 65px;
+.section-title{
+    color: var(--nightBlue);
+    font-size: helpers.rem-calc(50);
+    line-height: helpers.rem-calc(65);
 }
 
+.body-grey-text{
+  //line-height: 20px;
+  line-height: helpers.rem-calc(28);
+  color: var(--grey);
+  font-weight: 600;
+}
 //.open-sans-<uniquifier {
    //font-family: "Open Sans", sans-serif;
    //font-optical-sizing: auto;

@@ -1,6 +1,8 @@
 /* =============
     Buttons
 ============= */
+
+
 a{
     text-decoration: none;
 }
@@ -9,7 +11,7 @@ a{
 .nightBlue-link{
     background-color: var(nightBlue);
     color: var(--white);
-    font-size:helpers.rem-calc(14);
+    font-size: rem-calc(14);
     font-weight: 600;
     padding: 22px 36px;
     border-radius: 6px;
@@ -20,7 +22,7 @@ a{
 .nightBlue-btn{
     background-color: var(nightBlue);
     color: var(--white);
-    font-size:helpers.rem-calc(14);
+    font-size: rem-calc(14);
     font-weight: 600;
     padding: 22px 36px;
     border-radius: 6px;
