@@ -72,12 +72,15 @@
           background-color: var(--ghost);
           border: 1px solid var(--white);
           margin-bottom: 48px;
-  
+          padding : 16px;
+          border-radius: 14px;
+
           p {
             color: var(--nightBlue);
             font-weight: 600;
             font-size: helpers.rem-calc(20);
             line-height: helpers.rem-calc(28);
+            margin: 20px 0 16px;
           }
   
           h4 {
