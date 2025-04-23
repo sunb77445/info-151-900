@@ -8,17 +8,27 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
   }
   
-  p {
+p {
     margin: 0;
     padding: 0;
-  }
+}
   
-  ul {
+ul {
+    margin: 0;
+    padding:0;
+
+    li{
     list-style: none;
   }
-  
-  .img-scaler {
+}
+
+.img-scaler {
     width: 100%;
-  }
+}
+
+.content-padding{
+  padding: 40px 24px;
+}
   
+
   
