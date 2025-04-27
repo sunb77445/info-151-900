@@ -667,3 +667,38 @@ textarea {
 #about aside {
   margin-top: 68px;
 }
+
+/* =============
+    mq demo
+============= */
+#mq-demo {
+  height: 100vh;
+  background-color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mq-demo div {
+  height: 200px;
+  width: 200px;
+  background-color: var(--aqua);
+}
+@media (min-width: 768px) {
+  #mq-demo div {
+    height: 250px;
+    width: 250px;
+    background-color: orangered;
+  }
+}
+@media (min-width: 992px) {
+  #mq-demo div {
+    width: 400px;
+    background-color: purple;
+  }
+}
