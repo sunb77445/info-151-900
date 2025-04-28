@@ -676,14 +676,45 @@ textarea {
 /* =============
     newsletter
 ============= */
+#newsletter {
+  margin-bottom: 100px;
+}
 #newsletter #newsletter-content {
-  background-color: var(--lilywhite);
+  background-color: var(--lilyWhite);
   padding: 60px 16px;
 }
-#newsletter p {
+@media (min-width: 768px) {
+  #newsletter #newsletter-content {
+    padding: 60px 20vw;
+  }
+}
+@media (min-width: 992px) {
+  #newsletter #newsletter-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% auto;
+    grid-template-columns: 55% auto;
+    padding: 0px 0px;
+    gaps: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  #newsletter #newsletter-content {
+    -ms-grid-columns: 65% auto;
+    grid-template-columns: 65% auto;
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  #newsletter #newsletter-content #newsletter-left {
+    padding: 60px 0px 60px 60px;
+  }
+}
+#newsletter #newsletter-content #newsletter-left p {
   margin: 16px 0;
 }
-#newsletter form input {
+#newsletter #newsletter-content #newsletter-left form input {
   border: none;
   color: var(--grey);
   font-weight: 600;
@@ -694,41 +725,51 @@ textarea {
   border-radius: 8px;
   margin-bottom: 16px;
 }
-#newsletter form ::-webkit-input-placeholder {
+#newsletter #newsletter-content #newsletter-left form ::-webkit-input-placeholder {
   color: var(--grey);
   opacity: 1; /* Firefox */
 }
-#newsletter form ::-moz-placeholder {
+#newsletter #newsletter-content #newsletter-left form ::-moz-placeholder {
   color: var(--grey);
   opacity: 1; /* Firefox */
 }
-#newsletter form :-ms-input-placeholder {
+#newsletter #newsletter-content #newsletter-left form :-ms-input-placeholder {
   color: var(--grey);
   opacity: 1; /* Firefox */
 }
-#newsletter form ::-ms-input-placeholder {
+#newsletter #newsletter-content #newsletter-left form ::-ms-input-placeholder {
   color: var(--grey);
   opacity: 1; /* Firefox */
 }
-#newsletter form ::placeholder {
+#newsletter #newsletter-content #newsletter-left form ::placeholder {
   color: var(--grey);
   opacity: 1; /* Firefox */
 }
-#newsletter form ::-ms-input-placeholder {
+#newsletter #newsletter-content #newsletter-left form ::-ms-input-placeholder {
   color: var(--grey); /* Edge 12 - 18 */
 }
-#newsletter form div {
+#newsletter #newsletter-content #newsletter-left form div {
   text-align: right;
 }
-#newsletter form button {
+#newsletter #newsletter-content #newsletter-left form button {
   border: none;
   background-color: var(--nightBlue);
   color: var(--white);
   font-size: 0.875rem;
   font-weight: 600;
 }
-#newsletter aside {
+#newsletter #newsletter-content aside {
   display: none;
+}
+@media (min-width: 992px) {
+  #newsletter #newsletter-content aside {
+    display: block;
+    margin-top: -50px;
+  }
+}
+#newsletter #newsletter-content aside img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* =============
