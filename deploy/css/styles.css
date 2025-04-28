@@ -596,6 +596,24 @@ textarea {
   background-color: var(--aqua);
   color: var(--white);
 }
+@media (min-width: 768px) {
+  #packages #package-card-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "card1 card1 card2 card2" "...  card3 card3 ...";
+  }
+}
+@media (min-width: 1200px) {
+  #packages #package-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "card-1 card-2 card-3";
+  }
+}
 #packages #package-card-container .package-card {
   background-color: var(--ghost);
   border: 1px solid var(--white);
@@ -624,6 +642,35 @@ textarea {
 }
 #packages .selected {
   background-color: var(--white);
+}
+@media (min-width: 768px) {
+  #packages #card-1 {
+    grid-area: card-1;
+  }
+}
+@media (min-width: 768px) {
+  #packages #card-2 {
+    grid-area: card-2;
+  }
+}
+@media (min-width: 768px) {
+  #packages #card-3 {
+    grid-area: card-3;
+  }
+}
+@media (min-width: 1200px) {
+  #packages #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #packages #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #packages #card-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
 }
 
 /* =============
