@@ -929,6 +929,29 @@ textarea {
 #about {
   padding: 40px 24px;
 }
+@media (min-width: 768px) {
+  #about {
+    padding: 60px 20vw;
+  }
+}
+@media (min-width: 992px) {
+  #about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% auto;
+    grid-template-columns: 55% auto;
+    padding: 0px 0px;
+    gaps: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  #about {
+    -ms-grid-columns: 65% auto;
+    grid-template-columns: 65% auto;
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
 #about section .about-p {
   margin: 24px 0 40px;
 }
@@ -949,6 +972,16 @@ textarea {
 }
 #about aside {
   margin-top: 68px;
+}
+@media (min-width: 992px) {
+  #about aside {
+    display: block;
+    margin-top: -50px;
+  }
+}
+#about aside img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* =============
