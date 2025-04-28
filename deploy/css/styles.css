@@ -602,7 +602,7 @@ textarea {
     display: grid;
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "card1 card1 card2 card2" "...  card3 card3 ...";
+        grid-template-areas: "card-1 card-1 card-2 card-2" "...  card-3 card-3 ...";
   }
 }
 @media (min-width: 1200px) {
@@ -658,18 +658,38 @@ textarea {
     grid-area: card-3;
   }
 }
+@media (min-width: 768px) {
+  #packages #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  #packages #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+  }
+  #packages #card-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+}
 @media (min-width: 1200px) {
   #packages #card-1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
   #packages #card-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
   #packages #card-3 {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
   }
 }
 
@@ -778,6 +798,36 @@ textarea {
 #comms {
   text-align: center;
 }
+@media (min-width: 768px) {
+  #comms {
+    padding: 80px 8vw;
+  }
+}
+@media (min-width: 992px) {
+  #comms {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 107px 10vw;
+    gap: 48px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  #comms {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 107px 235px;
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
 #comms p {
   margin: 24px 0px 48px;
 }
@@ -787,6 +837,24 @@ textarea {
 ============= */
 #process .works-p {
   margin: 12px 0 24px;
+}
+@media (min-width: 768px) {
+  #process ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "pic1 pic1 pic2 pic2" "...  pic3 pic3 ...";
+  }
+}
+@media (min-width: 1200px) {
+  #process ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "pic1 pic2 pic3";
+  }
 }
 #process ul li {
   border: 1px solid var(--lilywhite);
@@ -805,6 +873,55 @@ textarea {
   -webkit-box-shadow: 0px 30px 50px 0px rgba(3, 3, 37, 0.3);
           box-shadow: 0px 30px 50px 0px rgba(3, 3, 37, 0.3);
 }
+@media (min-width: 768px) {
+  #process ul #pic1 {
+    grid-area: pic1;
+  }
+}
+@media (min-width: 768px) {
+  #process ul #pic2 {
+    grid-area: pic2;
+  }
+}
+@media (min-width: 768px) {
+  #process ul #pic3 {
+    grid-area: pic3;
+  }
+}
+@media (min-width: 768px) {
+  #process ul #pic1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  #process ul #pic2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+  }
+  #process ul #pic3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+}
+@media (min-width: 1200px) {
+  #process ul #pic1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #process ul #pic2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  #process ul #pic3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+}
 
 /* =============
     communication
@@ -814,6 +931,15 @@ textarea {
 }
 #about section .about-p {
   margin: 24px 0 40px;
+}
+@media (min-width: 992px) {
+  #about section ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 24px;
+  }
 }
 #about section ul li h2 {
   color: var(--nightBlue);

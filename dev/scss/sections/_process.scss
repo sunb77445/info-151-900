@@ -10,6 +10,21 @@
     }
 
     ul{
+
+        @include helpers.md{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "pic1 pic1 pic2 pic2"
+                                  "...  pic3 pic3 ...";
+          }
+  
+          @include helpers.xl{
+            max-width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "pic1 pic2 pic3";
+          }
+
         li{
             border: 1px solid var(--lilywhite);
             padding: 30px;
@@ -28,6 +43,24 @@
 
         #selected{
             box-shadow: 0px 30px 50px 0px rgba(3,3,37,0.3);
+        }
+
+        #pic1{
+            @include helpers.md{
+              grid-area: pic1;
+            }
+          }
+    
+          #pic2{
+            @include helpers.md{
+              grid-area: pic2;
+            }
+          }
+    
+          #pic3{
+            @include helpers.md{
+              grid-area: pic3;
+            }
         }
     }
 }

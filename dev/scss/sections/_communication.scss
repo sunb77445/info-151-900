@@ -6,6 +6,28 @@
 #comms{
     text-align: center;
 
+    @include helpers.md {
+        padding: 80px 8vw;
+      }
+  
+      @include helpers.lg {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 107px 10vw;
+        gap: 48px;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+  
+      @include helpers.xl {
+        grid-template-columns: 1fr;
+        padding: 107px 235px;
+        width: 1440px;
+        margin: 0 auto;
+      }
+
     p{
         margin: 24px 0px 48px;
     }
