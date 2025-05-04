@@ -1,36 +1,60 @@
 /* =============
-    process
+    How it works
 ============= */
 @use "../helpers";
 
-#process{
-    .works-p{
-        margin: 12px 0 24px;
 
+#works{
+
+    #works-title{
+        text-align: center;
+
+        .works-p{
+            margin: 12px 0 24px;
+
+            @include helpers.md{
+                padding: 0 20vw;
+            }
+
+            @include helpers.xl{
+                padding: 0 38vw;
+            }
+        }
     }
+   
+    
 
     ul{
 
         @include helpers.md{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-areas: "pic1 pic1 pic2 pic2"
-                                  "...  pic3 pic3 ...";
-          }
-  
-          @include helpers.xl{
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-areas:    "card-1 card-1 card-2 card-2"
+                                    "...... card-3 card-3 .....";
+            gap: 24px;
+        }
+
+        @include helpers.lg{
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "pic1 pic2 pic3";
-          }
+            grid-template-areas: "card-1 card-2 card-3";
+        }
+
+        @include helpers.xl{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
 
         li{
-            border: 1px solid var(--lilywhite);
+            border: 1px solid var(--lilyWhite);
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 12px;
             margin-bottom: 24px;
             background-color: var(--white);
+
+            @include helpers.md{
+                margin-bottom: 0;
+            }
 
             h2{
                 font-size: helpers.rem-calc(24);
@@ -38,29 +62,29 @@
                 font-weight: 600;
                 margin: 40px 0 12px;
             }
-
         }
 
-        #selected{
-            box-shadow: 0px 30px 50px 0px rgba(3,3,37,0.3);
+        #card-1{
+            @include helpers.md{
+                grid-area: card-1;
+            }
         }
 
-        #pic1{
+        #card-2{
             @include helpers.md{
-              grid-area: pic1;
+                grid-area: card-2;
             }
-          }
-    
-          #pic2{
+        }
+
+        #card-3{
             @include helpers.md{
-              grid-area: pic2;
+                grid-area: card-3;
             }
-          }
-    
-          #pic3{
-            @include helpers.md{
-              grid-area: pic3;
-            }
+        }
+
+        .selected{
+            box-shadow: 0px 20px 20px 0px rgba(3,3,37,0.025);
+
         }
     }
 }

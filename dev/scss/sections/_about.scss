@@ -1,43 +1,42 @@
 /* =============
-    communication
+    About
 ============= */
 @use "../helpers";
 
 #about{
     padding: 40px 24px;
 
-
-    @include helpers.md{
-        padding: 60px 20vw;
-      }
-    
-      @include helpers.lg{
+    @include helpers.lg{
         display: grid;
-        grid-template-columns: 55% auto;
-        padding: 0px 0px;
-        gaps: 60px;
-      }
-    
-      @include helpers.xl{
-        grid-template-columns: 65% auto;
+        grid-template-columns: 50% auto;
+    }
+
+    @include helpers.xl{
         width: 1200px;
         margin: 0 auto;
-      }
+    }
 
     section{
         .about-p{
             margin: 24px 0 40px;
         }
-
+    
         ul{
-            @include helpers.lg {
-                flex-direction: row;
-                gap: 24px;
+
+            @include helpers.md{
+                display: grid;
+                grid-template-columns: 50% auto;
+                gap: 16px;
             }
+
+            @include helpers.lg{
+                grid-template-columns: 1fr;
+            }
+
             li{
                 h2{
                     color: var(--nightBlue);
-                    font-size :helpers.rem-calc(20);
+                    font-size: helpers.rem-calc(20);
                     font-weight: 600;
                     margin-bottom: 8px;
                 }
@@ -47,17 +46,7 @@
 
     aside{
         margin-top: 68px;
-
-        @include helpers.lg{
-            display: block;
-            //border: 1px solid red;
-            margin-top: -50px;
-          }
-          img{
-            //margin-top: -120px;
-            object-fit: cover;
-          }
     }
 
-
+   
 }
