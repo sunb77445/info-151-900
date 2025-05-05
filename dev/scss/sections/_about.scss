@@ -34,12 +34,42 @@
             }
 
             li{
-                h2{
-                    color: var(--nightBlue);
-                    font-size: helpers.rem-calc(20);
-                    font-weight: 600;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .about-info {
+                    display: flex;
+                    margin-left: auto;
+                    align-items: center;
+                    gap: 16px;
                     margin-bottom: 8px;
+
+                    .text-info {
+                        align-items: center;
+                        
+                        height: auto;
+                      }
+
+                    
+                      h2{
+                        color: var(--nightBlue);
+                        font-size: helpers.rem-calc(20);
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                    }
+    
+                    p{
+                        font-size: 1rem;
+                        color: var(--grey);
+                    }
+    
+                    .about-icon{
+                        margin-top: -40px;
+                        //margin-right: 16px;
+                    }
                 }
+
             }
         }
     }
@@ -50,3 +80,4 @@
 
    
 }
+
