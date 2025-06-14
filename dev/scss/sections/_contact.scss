@@ -1,0 +1,50 @@
+/* =============
+    Contact
+============= */
+@use "../helpers";
+
+#contact {
+  @include helpers.xl {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  #contact-header {
+    text-align: center;
+
+    .contact-p {
+      margin: 12px 0 24px;
+
+      @include helpers.md {
+        padding: 0 20vw;
+      }
+
+      @include helpers.xl {
+        padding: 0 32vw;
+      }
+    }
+  }
+
+  .contact-info {
+    text-align: center;
+    font-size: helpers.rem-calc(16);
+    line-height: 1.6;
+
+    p {
+      margin-bottom: 12px;
+
+      strong {
+        color: var(--nightBlue);
+      }
+
+      a {
+        color: var(--midnightBlue);
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

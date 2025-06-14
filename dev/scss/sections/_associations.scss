@@ -1,0 +1,79 @@
+/* =============
+    Associations
+============= */
+@use "../helpers";
+
+#associations {
+  @include helpers.xl {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  #associations-header {
+    text-align: center;
+
+    .associations-p {
+      margin: 12px 0 24px;
+
+      @include helpers.md {
+        padding: 0 20vw;
+      }
+
+      @include helpers.xl {
+        padding: 0 32vw;
+      }
+    }
+  }
+
+  .association-list {
+    display: grid;
+    gap: 24px;
+
+    @include helpers.md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include helpers.lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include helpers.xl {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .association {
+      background-color: var(--white);
+      border: 1px solid var(--lilyWhite);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0px 10px 20px rgba(3, 3, 37, 0.025);
+
+      h2 {
+        font-size: helpers.rem-calc(20);
+        font-weight: 600;
+        color: var(--nightBlue);
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: var(--lightBlue);
+        color: var(--white);
+        border-radius: 6px;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--skyBlue);
+        }
+      }
+    }
+  }
+}

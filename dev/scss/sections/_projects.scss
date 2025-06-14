@@ -1,0 +1,56 @@
+/* =============
+    Projects
+============= */
+@use "../helpers";
+
+#projects {
+  @include helpers.xl {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  #projects-header {
+    text-align: center;
+
+    .projects-p {
+      margin: 12px 0 24px;
+
+      @include helpers.md {
+        padding: 0 20vw;
+      }
+
+      @include helpers.xl {
+        padding: 0 32vw;
+      }
+    }
+  }
+
+  section {
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: helpers.rem-calc(24);
+      color: var(--nightBlue);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 16px;
+        line-height: 1.6;
+
+        a {
+          color: var(--midnightBlue);
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
