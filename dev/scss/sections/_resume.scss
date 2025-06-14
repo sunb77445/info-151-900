@@ -1,123 +1,155 @@
 /* =============
     Resume
 ============= */
+
 @use "../helpers";
 
 #resume {
-  padding: 60px 24px;
-  background-color: #f7f9fc;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-
-  #resume-header {
-    grid-column: 1 / -1;
+  #resume-title {
     text-align: center;
-    margin-bottom: 48px;
 
-    h1 {
-      font-size: 2.5rem;
-      color: #1a237e;
-      margin-bottom: 12px;
-    }
+    .resume-p {
+      margin: 12px 0 24px;
 
-    p {
-      font-size: 1.1rem;
-      color: #5c6bc0;
+      @include helpers.md {
+        padding: 0 20vw;
+      }
+
+      @include helpers.xl {
+        padding: 0 38vw;
+      }
     }
   }
 
-  section {
-    margin-bottom: 36px;
-
-    h2 {
-      font-size: 1.5rem;
-      color: #1a237e;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #bbdefb;
-      padding-bottom: 4px;
+  ul {
+    @include helpers.md {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "card-contact card-education card-skills"
+        "card-projects card-projects card-experience"
+        "card-download card-download card-download";
+      gap: 24px;
     }
 
-    h3 {
-      font-size: 1.1rem;
-      color: #0d47a1;
-      margin: 12px 0 4px;
+    @include helpers.xl {
+      width: 1200px;
+      margin: 0 auto;
     }
 
-    p,
     li {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #444;
-      margin-bottom: 6px;
-    }
+      border: 1px solid var(--lilyWhite);
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      background-color: var(--white);
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+      @include helpers.md {
+        margin-bottom: 0;
+      }
 
-      li {
-        margin-bottom: 8px;
-        padding-left: 1.5em;
-        position: relative;
+      h2 {
+        font-size: helpers.rem-calc(24);
+        color: var(--nightBlue);
+        font-weight: 600;
+        margin: 0 0 16px;
+      }
 
-        &::before {
-          content: "✔";
-          position: absolute;
-          left: 0;
-          color: #66bb6a;
-          font-weight: bold;
+      a {
+        color: var(--oceanBlue);
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--nightBlue);
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          border: none;
+          padding: 4px 0;
+          border-radius: 0;
+          margin-bottom: 8px;
+          background-color: transparent;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .project-item,
+      .job-item {
+        margin-bottom: 12px;
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
-  }
 
-  .project-item,
-  .job-item {
-    padding-left: 16px;
-    border-left: 4px solid #90caf9;
-    margin-bottom: 20px;
-  }
-
-  #download {
-    grid-column: 1 / -1;
-    text-align: center;
-
-    a {
-      display: inline-block;
-      background-color: #1e88e5;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-
-      &:hover {
-        background-color: #0d47a1;
-        transform: scale(1.05);
+    #card-contact {
+      @include helpers.md {
+        grid-area: card-contact;
       }
     }
-  }
 
-  @media (max-width: 768px) {
-    display: block;
-    padding: 40px 16px;
-
-    section {
-      margin-bottom: 32px;
+    #card-education {
+      @include helpers.md {
+        grid-area: card-education;
+      }
     }
 
-    #resume-header h1 {
-      font-size: 2rem;
+    #card-skills {
+      @include helpers.md {
+        grid-area: card-skills;
+      }
     }
 
-    #download a {
-      font-size: 0.95rem;
-      padding: 10px 20px;
+    #card-projects {
+      @include helpers.md {
+        grid-area: card-projects;
+      }
+    }
+
+    #card-experience {
+      @include helpers.md {
+        grid-area: card-experience;
+      }
+    }
+
+    #card-download {
+      @include helpers.md {
+        grid-area: card-download;
+        text-align: center;
+
+        a {
+          display: inline-block;
+          padding: 12px 24px;
+          border-radius: 6px;
+          background-color: var(--mintGreen);
+          color: var(--white);
+          font-weight: bold;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+
+          &:hover {
+            background-color: var(--nightBlue);
+            transform: scale(1.05);
+            color: var(--white);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .selected {
+      box-shadow: 0px 20px 20px 0px rgba(3, 3, 37, 0.025);
     }
   }
 }

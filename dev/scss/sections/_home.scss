@@ -5,12 +5,15 @@
 
 #home {
     padding: 40px 24px;
+    color: red;
     @include helpers.lg {
       width: 1200px;
       margin: 0 auto;
     }
     section {
+      color: red;
       .home-p {
+        color: red;
         margin: 24px 0 40px;
       }
 
