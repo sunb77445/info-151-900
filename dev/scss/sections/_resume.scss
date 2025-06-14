@@ -1,0 +1,92 @@
+/* =============
+    Resume
+============= */
+@use "../helpers";
+
+#resume {
+    padding: 60px 24px;
+    background-color: #f7f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  
+    #resume-header {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 48px;
+  
+      h1 {
+        font-size: 2.5rem;
+        color: #1a237e;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #5c6bc0;
+      }
+    }
+  
+    section {
+      margin-bottom: 48px;
+  
+      h2 {
+        font-size: 1.4rem;
+        color: #1a237e;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 4px;
+      }
+  
+      h3 {
+        font-size: 1.1rem;
+        color: #0d47a1;
+        margin: 12px 0 4px;
+      }
+  
+      p,
+      li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0 0 6px;
+      }
+  
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+    }
+  
+    .project-item,
+    .job-item {
+      padding-left: 16px;
+      border-left: 3px solid #bbdefb;
+      margin-bottom: 16px;
+    }
+  
+    #download {
+      grid-column: 1 / -1;
+      text-align: center;
+  
+      a {
+        background-color: #1e88e5;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+  
+      a:hover {
+        background-color: #0d47a1;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+  

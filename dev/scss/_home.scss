@@ -2,6 +2,7 @@
     Home
 ============= */
 @use "../helpers";
+@use "../resume.kit";
 
 #home {
     padding: 40px 24px;
@@ -9,7 +10,6 @@
       width: 1200px;
       margin: 0 auto;
     }
-  
     section {
       .home-p {
         margin: 24px 0 40px;
