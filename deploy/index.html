@@ -246,7 +246,15 @@
     <p><strong>Personal Email:</strong> <a href="mailto:zsukihu1@gmail.com">zsukihu1@gmail.com</a></p>
     <p><strong>Location:</strong> Philadelphia, PA</p>
   </section>
+  <div id="back-to-top-container">
+    <button id="back-to-top">Back to Top ↑</button>
+  </div>
 </main>
+<script>
+  document.getElementById("back-to-top").onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
     <script src="js/scripts-min.js"></script>
 </body>
 
