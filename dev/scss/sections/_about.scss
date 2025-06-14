@@ -1,0 +1,73 @@
+/* =============
+    Home
+============= */
+@use "../helpers";
+
+#about {
+    padding: 60px 24px;
+    background: linear-gradient(to bottom, #f0fdfa, #ffffff);
+  
+    @include helpers.lg {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    section {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s ease;
+  
+      &:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      }
+  
+      .section-title,
+      h2 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+        color: #00856f; // teal green
+        position: relative;
+      }
+  
+      .about-p {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+        color: #333;
+        line-height: 1.6;
+      }
+  
+      ul {
+        list-style: none;
+        padding-left: 0;
+  
+        li {
+          position: relative;
+          padding-left: 1.5em;
+          margin-bottom: 10px;
+          color: #444;
+          font-size: 1rem;
+  
+          &::before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+  
+      a {
+        color: #005f99;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease;
+  
+        &:hover {
+          color: #003d66;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
