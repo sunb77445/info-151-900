@@ -4,45 +4,67 @@
 @use "../helpers";
 
 #contact {
-  @include helpers.xl {
-    width: 1200px;
-    margin: 0 auto;
-  }
+  margin-bottom: 100px;
+  background-color: var(--whiteSmoke);
 
   #contact-header {
+    padding: 60px 16px;
     text-align: center;
 
+    @include helpers.md {
+      padding: 60px 20vw;
+    }
+
+    @include helpers.lg {
+      padding: 60px 60px 40px 60px;
+    }
+
+    h1.section-title {
+      font-size: helpers.rem-calc(32);
+      font-weight: 700;
+      color: var(--nightBlue);
+      margin-bottom: 16px;
+    }
+
     .contact-p {
-      margin: 12px 0 24px;
+      font-size: helpers.rem-calc(16);
+      color: var(--bodyGrey);
+      line-height: 1.6;
 
       @include helpers.md {
-        padding: 0 20vw;
-      }
-
-      @include helpers.xl {
-        padding: 0 32vw;
+        padding: 0 4vw;
       }
     }
   }
 
-  .contact-info {
+  #contact-info {
+    background-color: var(--white);
+    padding: 40px 24px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
     text-align: center;
-    font-size: helpers.rem-calc(16);
-    line-height: 1.6;
+
+    @include helpers.md {
+      padding: 48px 10vw;
+    }
+
+    @include helpers.lg {
+      width: 800px;
+    }
 
     p {
-      margin-bottom: 12px;
-
-      strong {
-        color: var(--nightBlue);
-      }
+      font-size: helpers.rem-calc(16);
+      color: var(--nightBlue);
+      margin-bottom: 16px;
 
       a {
-        color: var(--midnightBlue);
-        text-decoration: underline;
+        color: var(--lightBlue);
+        text-decoration: none;
+        font-weight: 500;
 
         &:hover {
-          text-decoration: none;
+          color: var(--skyBlue);
         }
       }
     }
