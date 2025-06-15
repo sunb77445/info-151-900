@@ -6,12 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBarBtn = document.querySelector("#close-bar-btn");
   
     if (blueBar && closeBarBtn) {
-      // Hide if previously closed
       if (localStorage.getItem("bannerClosed") === "true") {
         blueBar.style.display = "none";
       }
   
-      // Set click event
       closeBarBtn.addEventListener("click", () => {
         blueBar.style.display = "none";
         localStorage.setItem("bannerClosed", "true");
