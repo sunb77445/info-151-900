@@ -5,6 +5,8 @@
 @use "../helpers";
 
 #resume {
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
+
   #resume-title {
     text-align: center;
 
@@ -22,18 +24,14 @@
   }
 
   ul {
-    @include helpers.md {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "card-contact card-education card-skills"
-        "card-projects card-projects card-experience"
-        "card-download card-download card-download";
-      gap: 24px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
 
     @include helpers.xl {
-      width: 1200px;
+      width: 800px;
       margin: 0 auto;
     }
 
@@ -41,18 +39,14 @@
       border: 1px solid var(--lilyWhite);
       padding: 30px;
       border-radius: 12px;
-      margin-bottom: 24px;
       background-color: var(--white);
-
-      @include helpers.md {
-        margin-bottom: 0;
-      }
+      list-style: none;
 
       h2 {
         font-size: helpers.rem-calc(24);
         color: var(--nightBlue);
         font-weight: 600;
-        margin: 0 0 16px;
+        margin-bottom: 16px;
       }
 
       a {
@@ -74,7 +68,6 @@
         li {
           border: none;
           padding: 4px 0;
-          border-radius: 0;
           margin-bottom: 8px;
           background-color: transparent;
 
@@ -94,39 +87,17 @@
       }
     }
 
-    #card-contact {
-      @include helpers.md {
-        grid-area: card-contact;
-      }
-    }
-
-    #card-education {
-      @include helpers.md {
-        grid-area: card-education;
-      }
-    }
-
-    #card-skills {
-      @include helpers.md {
-        grid-area: card-skills;
-      }
-    }
-
-    #card-projects {
-      @include helpers.md {
-        grid-area: card-projects;
-      }
-    }
-
-    #card-experience {
-      @include helpers.md {
-        grid-area: card-experience;
-      }
-    }
-
+    #card-contact,
+    #card-education,
+    #card-skills,
+    #card-projects,
+    #card-experience,
     #card-download {
       @include helpers.md {
-        grid-area: card-download;
+        grid-area: unset;
+      }
+
+      &#card-download {
         text-align: center;
 
         a {
@@ -134,7 +105,7 @@
           padding: 12px 24px;
           border-radius: 6px;
           background-color: var(--mintGreen);
-          color: var(--white);
+          color: grey;
           font-weight: bold;
           transition: background-color 0.3s ease, transform 0.2s ease;
 

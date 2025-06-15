@@ -527,6 +527,8 @@ textarea {
     Associations
 ============= */
 #associations {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0fdfa), to(#ffffff));
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
@@ -672,15 +674,36 @@ textarea {
   background-color: #004a99;
 }
 
-.blue-banner {
+#blue-bar {
+  background-color: lightblue;
+  bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 16px;
+  height: 48px;
+}
+
+#close-bar-btn {
   background-color: blue;
-  color: blue;
-  padding: 12px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+  color: grey;
+  border: none;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 16px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* =============
@@ -688,7 +711,8 @@ textarea {
 ============= */
 #contact {
   margin-bottom: 100px;
-  background-color: var(--whiteSmoke);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0fdfa), to(#ffffff));
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
 }
 #contact #contact-header {
   padding: 60px 16px;
@@ -758,7 +782,8 @@ textarea {
 ============= */
 #home {
   padding: 40px 24px;
-  color: red;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0fdfa), to(#ffffff));
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
 }
 @media (min-width: 992px) {
   #home {
@@ -767,10 +792,10 @@ textarea {
   }
 }
 #home section {
-  color: red;
+  color: black;
 }
 #home section .home-p {
-  color: red;
+  color: black;
   margin: 24px 0 40px;
 }
 #home section blockquote {
@@ -801,6 +826,10 @@ textarea {
 /* =============
     Projects
 ============= */
+#projects {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0fdfa), to(#ffffff));
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
+}
 @media (min-width: 1200px) {
   #projects {
     width: 1200px;
@@ -850,6 +879,10 @@ textarea {
 /* =============
     Resume
 ============= */
+#resume {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0fdfa), to(#ffffff));
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
+}
 #resume #resume-title {
   text-align: center;
 }
@@ -866,20 +899,21 @@ textarea {
     padding: 0 38vw;
   }
 }
-@media (min-width: 768px) {
-  #resume ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
-    grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: auto 24px auto 24px auto;
-        grid-template-areas: "card-contact card-education card-skills" "card-projects card-projects card-experience" "card-download card-download card-download";
-    gap: 24px;
-  }
+#resume ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
 }
 @media (min-width: 1200px) {
   #resume ul {
-    width: 1200px;
+    width: 800px;
     margin: 0 auto;
   }
 }
@@ -887,19 +921,14 @@ textarea {
   border: 1px solid var(--lilyWhite);
   padding: 30px;
   border-radius: 12px;
-  margin-bottom: 24px;
   background-color: var(--white);
-}
-@media (min-width: 768px) {
-  #resume ul li {
-    margin-bottom: 0;
-  }
+  list-style: none;
 }
 #resume ul li h2 {
   font-size: 1.5rem;
   color: var(--nightBlue);
   font-weight: 600;
-  margin: 0 0 16px;
+  margin-bottom: 16px;
 }
 #resume ul li a {
   color: var(--oceanBlue);
@@ -918,7 +947,6 @@ textarea {
 #resume ul li ul li {
   border: none;
   padding: 4px 0;
-  border-radius: 0;
   margin-bottom: 8px;
   background-color: transparent;
 }
@@ -934,82 +962,51 @@ textarea {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  #resume ul #card-contact {
-    grid-area: card-contact;
-  }
-}
-@media (min-width: 768px) {
-  #resume ul #card-education {
-    grid-area: card-education;
-  }
-}
-@media (min-width: 768px) {
-  #resume ul #card-skills {
-    grid-area: card-skills;
-  }
-}
-@media (min-width: 768px) {
-  #resume ul #card-projects {
-    grid-area: card-projects;
-  }
-}
-@media (min-width: 768px) {
-  #resume ul #card-experience {
-    grid-area: card-experience;
-  }
-}
-@media (min-width: 768px) {
+  #resume ul #card-contact,
+  #resume ul #card-education,
+  #resume ul #card-skills,
+  #resume ul #card-projects,
+  #resume ul #card-experience,
   #resume ul #card-download {
-    grid-area: card-download;
-    text-align: center;
-  }
-  #resume ul #card-download a {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 6px;
-    background-color: var(--mintGreen);
-    color: var(--white);
-    font-weight: bold;
-    -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
-    transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
-  }
-  #resume ul #card-download a:hover {
-    background-color: var(--nightBlue);
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    color: var(--white);
-    text-decoration: none;
+    grid-area: unset;
   }
 }
-@media (min-width: 768px){
-  #resume ul #card-contact {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  #resume ul #card-education {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-  #resume ul #card-skills {
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
-  }
-  #resume ul #card-projects {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-  #resume ul #card-experience {
-    -ms-grid-row: 3;
-    -ms-grid-column: 5;
-  }
-  #resume ul #card-download {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
+#resume ul #card-contact#card-download,
+#resume ul #card-education#card-download,
+#resume ul #card-skills#card-download,
+#resume ul #card-projects#card-download,
+#resume ul #card-experience#card-download,
+#resume ul #card-download#card-download {
+  text-align: center;
+}
+#resume ul #card-contact#card-download a,
+#resume ul #card-education#card-download a,
+#resume ul #card-skills#card-download a,
+#resume ul #card-projects#card-download a,
+#resume ul #card-experience#card-download a,
+#resume ul #card-download#card-download a {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: var(--mintGreen);
+  color: grey;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+#resume ul #card-contact#card-download a:hover,
+#resume ul #card-education#card-download a:hover,
+#resume ul #card-skills#card-download a:hover,
+#resume ul #card-projects#card-download a:hover,
+#resume ul #card-experience#card-download a:hover,
+#resume ul #card-download#card-download a:hover {
+  background-color: var(--nightBlue);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: var(--white);
+  text-decoration: none;
 }
 #resume ul .selected {
   -webkit-box-shadow: 0px 20px 20px 0px rgba(3, 3, 37, 0.025);

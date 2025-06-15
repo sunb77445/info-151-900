@@ -1,35 +1,19 @@
-/* ------------------------------------------------------
-   Blue Status Bar
------------------------------------------------------- */
-document.addEventListener("DOMContentLoaded", () => {
-    const blueBar = document.querySelector("#blue-bar");
-    const closeBarBtn = document.querySelector("#close-bar-btn");
-  
-    if (blueBar && closeBarBtn) {
-      if (localStorage.getItem("bannerClosed") === "true") {
-        blueBar.style.display = "none";
-      }
-  
-      closeBarBtn.addEventListener("click", () => {
-        blueBar.style.display = "none";
-        localStorage.setItem("bannerClosed", "true");
-      });
-    }
-  
-    /* ------------------------------------------------------
-       Takeover Burger Menu
-    ------------------------------------------------------ */
-    const burgerBtn = document.querySelector("#burger-btn");
-    const mainNav = document.querySelector("#main-nav");
-    const closeTakeoverBtn = document.querySelector("#close-takeover-btn");
-  
-    if (burgerBtn && mainNav && closeTakeoverBtn) {
-      burgerBtn.addEventListener("click", () => {
-        mainNav.style.display = "flex";
-      });
-  
-      closeTakeoverBtn.addEventListener("click", () => {
-        mainNav.style.display = "none";
-      });
-    }
-  });
+// blue bar close button
+document.addEventListener("DOMContentLoaded", function () {
+  const closeBtn = document.getElementById("close-bar-btn");
+  const blueBar = document.getElementById("blue-bar");
+
+  if (closeBtn && blueBar) {
+    closeBtn.addEventListener("click", function () {
+      blueBar.style.display = "none";
+    });
+  }
+
+  // back to top button
+  const backToTopBtn = document.querySelector(".back-to-top");
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+});

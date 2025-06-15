@@ -4,6 +4,7 @@
 @use "../helpers";
 
 #projects {
+  background: linear-gradient(to bottom, #f0fdfa, #ffffff);
   @include helpers.xl {
     width: 1200px;
     margin: 0 auto;
